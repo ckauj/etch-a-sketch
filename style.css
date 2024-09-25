@@ -1,17 +1,16 @@
 #grid-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: 2000px;
 }
 
 .grid-row {
-    border-style: solid;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     flex: 1;
+    flex-direction: row;
+    border-style: solid;
 }
 
 .grid-square {
-    border-style: solid;
-    flex-basis: 100%;
+    flex: 1;
 }
