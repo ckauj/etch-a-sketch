@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="createGrid()">
+    <div id="reset-container">
+        <button id="reset-grid">Reset Grid</button>
+    </div>
+    <div id="grid-container"></div>
+    <script>
+        const resetButton = document.querySelector("#reset-grid");
+        resetButton.addEventListener("click", function() {
+            let gridDimension = prompt("Enter new grid dimensions", 16);
+            createGrid(gridDimension);
+        });
+    </script>
+</body>
+</html>
