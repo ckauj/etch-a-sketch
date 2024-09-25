@@ -8,7 +8,6 @@ function createGrid(gridDimension) {
     let divCounter = gridDimension * gridDimension;
     while(divCounter-- > 0) {
         const gridSquare = document.createElement("div");
-        gridSquare.textContent = "test";
         grid.appendChild(gridSquare);
     }
 }
