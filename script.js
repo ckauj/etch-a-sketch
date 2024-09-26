@@ -16,11 +16,10 @@ function createGrid(gridDimension) {
             const red = Math.floor(Math.random() * 256);
             const green = Math.floor(Math.random() * 256);
             const blue = Math.floor(Math.random() * 256);
-            gridSquare.style.opacity = '0%';
 
             gridSquare.addEventListener("mouseover", function() {
                 gridSquare.style.backgroundColor = `rgb(${red},${green},${blue})`;
-                gridSquare.style.opacity = '10%';
+                gridSquare.style.opacity = '0.1';
             });
             gridRow.appendChild(gridSquare);
         }
