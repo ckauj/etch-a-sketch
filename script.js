@@ -2,9 +2,9 @@
 
 function createGrid(gridDimension) {
     gridDimension = gridDimension !== null && gridDimension > 0 && gridDimension <= 100 ? gridDimension : 16;
-
     const grid = document.querySelector("#grid-container");
-    grid.textContent = "";
+    
+    clearGrid();
 
     for(let x = 0; x < gridDimension; x++) {
         const gridRow = document.createElement("div");
@@ -25,4 +25,25 @@ function createGrid(gridDimension) {
         }
         grid.appendChild(gridRow);
     }
+}
+
+function clearGrid() {
+    const grid = document.querySelector("#grid-container");
+    grid.textContent = "";
+}
+
+function main() {
+    createGrid();
+
+    const resizeGrid = document.querySelector("#resize-grid");
+    resizeGrid.addEventListener("click", function() {
+        let gridDimension = prompt("Enter new grid dimensions", 16);
+        createGrid(gridDimension);
+    });
+
+    const resetGrid = document.querySelector("#clear-grid");
+    resetGrid.addEventListener("click", function() {
+        clearGrid();
+        createGrid();
+    });
 }
