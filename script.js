@@ -19,7 +19,7 @@ function createGrid(gridDimension) {
 
             gridSquare.addEventListener("mouseover", function() {
                 gridSquare.style.backgroundColor = `rgb(${red},${green},${blue})`;
-                gridSquare.style.opacity = '0.1';
+                gridSquare.style.opacity = Number(gridSquare.style.opacity) + 0.1;
             });
             gridRow.appendChild(gridSquare);
         }
